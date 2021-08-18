@@ -1,0 +1,21 @@
+Sidebar
+1. Verify that 'Tops' filter tab is opens
+2. Verify that 'Dresses' filter tab is open
+3. Verify that 'Tops' filter tab select
+4. Verify that 'Dresses' tab filter select
+5. Verify that 'Size' filter tab is select
+6. Verify that 'Color' filter tab is select
+7. Verify that 'Compositions' filter tab is select
+8. Verify that 'Styles' filter tab is select
+9. Verify that 'Properties' filter tab is select
+10. Verify that 'Availability' filter tab is select
+11. Verify that 'Manufacturer' filter tab is select
+12. Verify that 'Condition' filter tab is select
+13. Verify that user can edit 'Price' by range filter
+14. Verify that user can sort by dropaown list
+
+
+
+
+
+
