@@ -1,0 +1,16 @@
+1 - Contact Us
+
+Verify that user can open 'Contact us' page
+Verify that user can choose file in 'Attach File' field
+Verify that user can change 'Subject Heading' dropdown menu
+Verify that user can send a message with entered valid data
+Verify that user can't send a message without entered data
+
+2 - Landing page
+
+Verify that user can see top level menu
+Verify that user can see 'Cart'
+Verify that 'POPULAR' tab is opened
+Verify that user can open 'BEST SELLERS' tab 
+Verify that user can click on items
+Verigy rhat user can use 'Follow us on Facebook' button
