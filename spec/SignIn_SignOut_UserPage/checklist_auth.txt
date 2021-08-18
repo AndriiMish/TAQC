@@ -1,0 +1,38 @@
+[‘Main’ page] Verify that User can open ‘Authentication’ page if ‘Sign in' button is clicked .
+
+
+[‘Authentication’ page, ‘Create your Account’ window] Verify that User can open ‘Create your Account’ page if ‘Email address’ field is filled with valid data.
+[‘Authentication’ page, ‘Create your Account’ window] Verify that User can’t open ‘Create your Account’ page if ‘Email address’ field is filled  with invalid data. ‘Invalid email’ message is shown.
+[‘Authentication’ page, ‘Create your Account’ window] Verify that User can’t open ‘Create your Account’ page with empty ‘Email address’ field. ‘Invalid email’ message is shown.
+[‘Authentication’ page, ‘Create your Account’ window] Verify that User can’t open ‘Create your Account’ page if ‘Email address’ field is filled  with email, which already exists in app. ‘An account using this email address has already been registered. Please enter a valid password or request a new one.’ message is shown.
+[‘Authentication’ page, ‘Already Registered?’ window] Verify that User can enter in system if ‘Email address’ and ‘Password’ fields are filled with valid data.‘My Account’ page is opened.
+[‘Authentication’ page, ‘Already Registered?’ window] Verify that User can’t enter in system  if ‘Email address’ and ‘Password’ fields are filled with invalid data.‘Authentication failed’ message is shown.
+[‘Authentication’ page, ‘Already Registered?’ window] Verify that User can’t enter in system with empty ‘Email address’ and ‘Password’  fields. ‘An email address required.’ message is shown.
+
+
+[‘Create your Account’ page] Verify that User can register if ‘Your personal information’ and ‘Your address’ forms are filled with valid data. ‘My Account’ page is opened.
+[‘Create your Account’ page] Verify that User can’t register if ‘First name’ field  is empty. ‘First name is required’ message is shown.
+[‘Create your Account’ page] Verify that User can’t register if ‘Last name’ field is empty. ‘Last name is required’ message is shown.
+[‘Create your Account’ page] Verify that User can’t register if ‘Password’ field is empty. ‘Password is required’ message is shown.
+[‘Create your Account’ page] Verify that User can’t register if ‘City’ field is empty. ‘City is required’ message is shown. 
+[‘Create your Account’ page] Verify that User can’t register if ‘State’ field is empty. ‘This country requires you to choose a State.’ message is shown.
+[‘Create your Account’ page] Verify that User can’t register if ‘Zip/Postal Code’ field is empty. ‘The Zip/Postal code you entered is invalid. It must follow this format: 00000’ message is shown.
+[‘Create your Account’ page] Verify that User can’t register if ‘Mobile phone ’field is empty. ‘You must register at least one phone number’ message is shown.
+[‘Create your Account’ page] Verify that User can’t register if ‘Email’ field is filled with invalid data. ‘Email is invalid.’ message is shown.
+[‘Create your Account’ page] Verify that User can’t register if ‘First name’ field  is filled with invalid data. ‘First name is invalid.’ message is shown.
+[‘Create your Account’ page] Verify that User can’t register if ‘Last name’ is filled with invalid data. ‘Last name is invalid.’ message is shown.
+[‘Create your Account’ page] Verify that User can’t register if ‘Password’ field  is filled with invalid data. ‘Password is invalid.’ message is shown.
+[‘Create your Account’ page] Verify that User can’t register if ‘Zip/Postal Code’ field is filled with invalid data. ‘The Zip/Postal code you entered is invalid. It must follow this format: 00000’ message is shown.
+[‘Create your Account’ page] Verify that User can’t register if ‘Mobile phone’ field is filled with invalid data. ‘Mobile phone is invalid.’ message is shown.
+
+
+[‘My Account’ page] Verify that User can open ‘Order History and Details’ page if ‘Order History and Details’ button is clicked.
+[‘My Account’ page] Verify that User can open ‘My credit slips’ page if ‘My credit slips’ button is clicked.
+[‘My Account’ page] Verify that User can open ‘My addresses' page if ‘My addresses' button is clicked.
+[‘My Account’ page] Verify that User can open ‘My personal information’ page if ‘My personal information’ button is clicked.
+[‘My Account’ page] Verify that User can open ‘My wishlists’ page  if ‘My wishlists’ button is clicked.
+[‘My Account’ page] Verify that User can open ‘Main’ page if ‘Home’ button is clicked.
+[‘My Account’ page] Verify that User can open ‘Main’ page if ‘Return to Home’ icon is clicked.
+
+
+[‘Main’ page] Verify that User can open ‘Authentication’ page if ‘Sign out' button is clicked.
