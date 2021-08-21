@@ -1,20 +1,21 @@
-Check list 
-1. Verify that User can click on 'Woman' section 'Categories' link, link is opened
-2. Verify that User can click on 'Specials' section 'Information', link is opened
-3. Verify that User can click on 'New products' section 'Information', link is opened
-4. Verify that User can click on 'Best sellers' section 'Information', link is opened.
-5. Verify that User can click on 'Our stores' section 'Information', link is opened.
-6. Verify that User can click on 'Contact us' section 'Information', link is opened.
-7. Verify that User can click on 'Terms and conditions of use' section 'Information', link is opened.
-8. Verify that User can click on 'About us' section 'Information', link is opened.
-9. Verify that User can click on 'Sitemap' section 'Information', link is opened.
-10. Verify that User can click on 'My orders' section 'My account', link is opened.
-11. Verify that User can click on 'My credit slips' section 'My account', link is opened.
-12. Verify that User can click on 'My addresses' section 'My account', link is opened.
-13. Verify that User can click on 'My personal info' section 'My account', link is opened.
-14. Verify that User can click 'Store information' email link. 
-15. Verify that User can click 'Follow us' Social media links'Facebook'.
-16. Verify that User can click 'Follow us' Social media links'Twitter'.
-17. Verify that User can click 'Follow us' Social media links'YouTube'.
-18. Verify that User can click 'Follow us' Social media links'Google+'.
-19. Verify that registered User can entering email .
+Verify upon clicking 'Women' category user is redirected to Women page.
+Verify upon cliking 'Women' category URL querey string match with redirect URL Woman page.
+Verify upon clicking 'Specials' category user is redirected to Price drop page.
+Verify upon clicking 'New products' category user is redirected to New products page.
+Verify upon clicking 'Best sellers' category user is redirected to Best sellers page.
+Verify upon clicking 'Our stores' category user is redirected to Our store(s) page.
+Verify upon clicking 'Contact us' category user is redirected to Contact us page.
+Verify upon clicking 'Terms and conditions of use' category user is redirected to Terms and conditions of use page.
+Verify upon clicking 'About us' category user is redirected to About us page.
+Verify upon clicking 'Sitemap' category user is redirected to Sitemap page.
+Verify upon clicking 'My orders' category user is redirected to Authentication page.
+Verify upon clicking 'My credit slips' category user is redirected to Authentication page.
+Verify upon clicking 'My addresses' category user is redirected to Authentication page.
+Verify upon clicking 'My personal info' category user is redirected to Authentication page.
+Verify upon clicking 'My personal info' category user is redirected to Authentication page.
+Verify upon clicking 'Social media link Facebook' user is redirect to Facebook page.
+Verify upon clicking 'Social media link Twitter' user is redirect to Twitter page.
+Verify upon clicking 'Social media link YouTube' user is redirect to Youtube page.
+Verify upon clicking 'Social media link Google+ ' user is redirect to Google+ page.
+Verify upon entering a valid email user can receive newsletters.
+Verify upon User can't receive newsletters whithout Invalid email address.'Invalid email address..' message is shown.
