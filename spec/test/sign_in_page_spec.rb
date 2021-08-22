@@ -1,4 +1,4 @@
-require_relative '../spec_helper'
+require_relative 'spec_helper'
 
 RSpec.describe 'SignIn page' do
   landing_page = LandingPage.new
