@@ -16,6 +16,12 @@ GEM
     diff-lcs (1.4.4)
     method_source (1.0.0)
     mini_mime (1.1.0)
+    mini_portile2 (2.5.3)
+    nokogiri (1.11.3)
+      mini_portile2 (~> 2.5.0)
+      racc (~> 1.4)
+    nokogiri (1.11.3-x64-mingw32)
+      racc (~> 1.4)
     nokogiri (1.11.3-x86_64-darwin)
       racc (~> 1.4)
     pry (0.14.0)
@@ -49,6 +55,7 @@ GEM
 
 PLATFORMS
   ruby
+  x64-mingw32
   x86_64-darwin-19
 
 DEPENDENCIES
