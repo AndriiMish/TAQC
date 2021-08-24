@@ -11,4 +11,8 @@ Driver.new
 
 def browser
   $driver
+<<<<<<< HEAD
 end
+=======
+end
+>>>>>>> master
