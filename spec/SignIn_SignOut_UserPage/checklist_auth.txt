@@ -1,38 +1,67 @@
-[‘Main’ page] Verify that User can open ‘Authentication’ page if ‘Sign in' button is clicked .
+[‘Main’ page] Verify if 'Sign in' button is displayed if User is not signed in.
+[‘Main’ page] Verify upon clicking on ‘Sign in' button User is redirected to ‘Authentication’ page.
 
+---------
 
-[‘Authentication’ page, ‘Create your Account’ window] Verify that User can open ‘Create your Account’ page if ‘Email address’ field is filled with valid data.
-[‘Authentication’ page, ‘Create your Account’ window] Verify that User can’t open ‘Create your Account’ page if ‘Email address’ field is filled  with invalid data. ‘Invalid email’ message is shown.
-[‘Authentication’ page, ‘Create your Account’ window] Verify that User can’t open ‘Create your Account’ page with empty ‘Email address’ field. ‘Invalid email’ message is shown.
-[‘Authentication’ page, ‘Create your Account’ window] Verify that User can’t open ‘Create your Account’ page if ‘Email address’ field is filled  with email, which already exists in app. ‘An account using this email address has already been registered. Please enter a valid password or request a new one.’ message is shown.
-[‘Authentication’ page, ‘Already Registered?’ window] Verify that User can enter in system if ‘Email address’ and ‘Password’ fields are filled with valid data.‘My Account’ page is opened.
-[‘Authentication’ page, ‘Already Registered?’ window] Verify that User can’t enter in system  if ‘Email address’ and ‘Password’ fields are filled with invalid data.‘Authentication failed’ message is shown.
-[‘Authentication’ page, ‘Already Registered?’ window] Verify that User can’t enter in system with empty ‘Email address’ and ‘Password’  fields. ‘An email address required.’ message is shown.
+[‘Authentication’ page, ‘Already Registered?’ window] Verify upon filling ‘Email address’ and ‘Password’ fields with valid existing data and clicking on ‘Sign in’ button User is redirected to ‘My Account’ page.
 
+[‘Authentication’ page, ‘Already Registered?’ window] Verify upon filling ‘Email address’ and ‘Password’ fields with invalid data and clicking on ‘Sign in’ button ‘Invalid email address.’ message is shown.
+[‘Authentication’ page, ‘Already Registered?’ window] Verify upon filling ‘Email address’ field with invalid data and filling ‘Password’ field with valid data and clicking on ‘Sign in’ button ‘Invalid email address.’ message is shown.
+[‘Authentication’ page, ‘Already Registered?’ window] Verify upon filling ‘Email address’ field with valid data and filling ‘Password’ field with invalid data and clicking on ‘Sign in’ button ‘Invalid password.’ message is shown.
 
-[‘Create your Account’ page] Verify that User can register if ‘Your personal information’ and ‘Your address’ forms are filled with valid data. ‘My Account’ page is opened.
-[‘Create your Account’ page] Verify that User can’t register if ‘First name’ field  is empty. ‘First name is required’ message is shown.
-[‘Create your Account’ page] Verify that User can’t register if ‘Last name’ field is empty. ‘Last name is required’ message is shown.
-[‘Create your Account’ page] Verify that User can’t register if ‘Password’ field is empty. ‘Password is required’ message is shown.
-[‘Create your Account’ page] Verify that User can’t register if ‘City’ field is empty. ‘City is required’ message is shown. 
-[‘Create your Account’ page] Verify that User can’t register if ‘State’ field is empty. ‘This country requires you to choose a State.’ message is shown.
-[‘Create your Account’ page] Verify that User can’t register if ‘Zip/Postal Code’ field is empty. ‘The Zip/Postal code you entered is invalid. It must follow this format: 00000’ message is shown.
-[‘Create your Account’ page] Verify that User can’t register if ‘Mobile phone ’field is empty. ‘You must register at least one phone number’ message is shown.
-[‘Create your Account’ page] Verify that User can’t register if ‘Email’ field is filled with invalid data. ‘Email is invalid.’ message is shown.
-[‘Create your Account’ page] Verify that User can’t register if ‘First name’ field  is filled with invalid data. ‘First name is invalid.’ message is shown.
-[‘Create your Account’ page] Verify that User can’t register if ‘Last name’ is filled with invalid data. ‘Last name is invalid.’ message is shown.
-[‘Create your Account’ page] Verify that User can’t register if ‘Password’ field  is filled with invalid data. ‘Password is invalid.’ message is shown.
-[‘Create your Account’ page] Verify that User can’t register if ‘Zip/Postal Code’ field is filled with invalid data. ‘The Zip/Postal code you entered is invalid. It must follow this format: 00000’ message is shown.
-[‘Create your Account’ page] Verify that User can’t register if ‘Mobile phone’ field is filled with invalid data. ‘Mobile phone is invalid.’ message is shown.
+[‘Authentication’ page, ‘Already Registered?’ window] Verify upon leaving ‘Email address’ and ‘Password’ fields are empty and clicking on ‘Sign in’ button ‘An email address required.’ message is shown.
+[‘Authentication’ page, ‘Already Registered?’ window] Verify upon leaving ‘Email address’ field is empty and filling ‘Password’ field with valid data and clicking on ‘Sign in’ button ‘An email address required.’ message is shown.
+[‘Authentication’ page, ‘Already Registered?’ window] Verify upon filling ‘Email address’ field with valid data and leaving ‘Password’ field is empty and clicking on ‘Sign in’ button ‘Password is required.’ message is shown.
+[‘Authentication’ page, ‘Already Registered?’ window] Verify upon leaving ‘Email address’ field is empty and filling ‘Password’ field with invalid data and clicking on ‘Sign in’ button ‘An email address required.’ message is shown.
+[‘Authentication’ page, ‘Already Registered?’ window] Verify upon filling ‘Email address’ field with invalid data and leaving ‘Password’ field is empty and clicking on ‘Sign in’ button ‘Password is required.’ message is shown.
 
+[‘Authentication’ page, ‘Already Registered?’ window] Verify upon filling ‘Email address’ field with valid non-existing data and ‘Password’ field with valid data and clicking on ‘Sign in’ button ‘Authentication failed.’ message is shown.
+[‘Authentication’ page, ‘Already Registered?’ window] Verify upon filling ‘Email address’ field with valid existing data and filling ‘Password’ field with valid non-existing data and clicking on ‘Sign in’ button ‘Authentication failed.’ message is shown.
 
-[‘My Account’ page] Verify that User can open ‘Order History and Details’ page if ‘Order History and Details’ button is clicked.
-[‘My Account’ page] Verify that User can open ‘My credit slips’ page if ‘My credit slips’ button is clicked.
-[‘My Account’ page] Verify that User can open ‘My addresses' page if ‘My addresses' button is clicked.
-[‘My Account’ page] Verify that User can open ‘My personal information’ page if ‘My personal information’ button is clicked.
-[‘My Account’ page] Verify that User can open ‘My wishlists’ page  if ‘My wishlists’ button is clicked.
-[‘My Account’ page] Verify that User can open ‘Main’ page if ‘Home’ button is clicked.
-[‘My Account’ page] Verify that User can open ‘Main’ page if ‘Return to Home’ icon is clicked.
+--EMAIL--
+Valid:
+1. The basic format of an e-mail address is- local-part@domain-part (max: 64@255 characters, no more 256 in total).
+2. The local part:
+-- latin letters in upper and/or lower case (A-Z, a-z)
+-- numbers (from 0 to 9)
+-- special characters like !#$%&’*+-/=?^_{|}~,
+-- dot: . (not first or last character)
+3. The domain part:
+-- has two parts separated by dot(.)
+-- latin letters in upper and/or lower case (A-Z, a-z)
+-- numbers (from 0 to 9)
+-- hyphen: - (not first or last character)
 
+Invalid:
+1. At least one of the domain/local part is missing.
+2. Local part length is from 1 to 64 symbols.
+3. Domain part length is more than 255 symbols.
+4. Total length is more than 256 symbols.
+5. Email consists of at least one space anywhere.
+6. Local part has dot: . (first or last character).
+7. Domain part has hyphen: - (first or last character).
+8. Domain part has special characters like !#$%&’*+-/=?^_{|}~,
+9. Domain part has one part without dot(.)
 
-[‘Main’ page] Verify that User can open ‘Authentication’ page if ‘Sign out' button is clicked.
+--PASSWORD-- 
+Valid:
+1. Password length is from 5 to 32 symbols.
+
+Invalid: 
+1. Password length is less than 5.
+2. Password length is more than 32.
+
+---------
+
+[‘My Account’ page] Verify upon clicking on ‘Order History and Details’ button User is redirected to ‘Order History and Details’ page.
+[‘My Account’ page] Verify upon clicking on ‘My credit slips’ button User is redirected to ‘My credit slips’ page.
+[‘My Account’ page] Verify upon clicking on ‘My addresses’ button User is redirected to ‘My addresses’ page.
+[‘My Account’ page] Verify upon clicking on ‘My personal information’ button User is redirected to ‘My personal information’ page.
+[‘My Account’ page] Verify upon clicking on ‘My wishlists’ button User is redirected to ‘My wishlists’ page.
+[‘My Account’ page] Verify upon clicking on ‘Main’ button User is redirected to ‘Main’ page.
+[‘My Account’ page] Verify upon clicking on ‘Return to Home’ icon User is redirected to ‘Main’ page.
+
+---------
+[‘Main’ page] Verify if 'Sign out' button is displayed if User is signed in.
+[‘Main’ page] Verify upon clicking ‘Sign out’ button is redirected to ‘Authentication’ page.
+
