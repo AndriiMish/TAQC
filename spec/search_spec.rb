@@ -33,6 +33,14 @@ RSpec.describe 'Search tab' do
       search_page.wait_for{ current_url != browser.current_url }
       expect(search_page.alert.text).to include(data)
     end
+	
+	it 'verifies that length of the unexisted search data will be described in the alert message block without any border interruption' do
+      data = 'a' * 250
+      current_url = browser.current_url
+      search_page.search(data)
+      search_page.wait_for{ current_url != browser.current_url }
+      expect(search_page.alert.text).to include(data)
+    end
 
     it 'after clicking on the search button with empty field the alert message shows' do
       search_page.search_input.clear

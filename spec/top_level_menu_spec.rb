@@ -9,7 +9,7 @@ RSpec.describe 'TopLevelMenu tab' do
 
   after(:all) { browser.close }
 
-  context 'UI TPLM bar check' do
+  context 'TPLM bar check' do
     it 'verify that women button is displayed' do
       binding.pry
       expect(tplevelmenu_tab.women.displayed?).to be(true)
@@ -26,5 +26,26 @@ RSpec.describe 'TopLevelMenu tab' do
     it 'verify that all tab with buttons is displayed' do
       expect(tplevelmenu_tab.tplm_bar.displayed?).to be(true)
     end
+	
+	it 'verify that after clickng on the women button women page is opened'
+		current_url = browser.current_url
+		tplevelmenu_tab.women.click
+		search_page.wait_for{ current_url != browser.current_url }
+		expect(tplevelmenu_tab.url_include?('http://automationpractice.com/index.php?id_category=3&controller=category').on page? (true)
+	end
+	
+	it 'verify that after clicking on the dresses button dresses page is opened'
+		current_url = browser.current_url
+		tplevelmenu_tab.dresses.click
+		search_page.wait_for{ current_url != browser.current_url }
+		expect(tplevelmenu_tab.url_include?('http://automationpractice.com/index.php?id_category=8&controller=category').on page? (true)
+	end
+	
+	it 'verify that after clicking on the t-shirts button t-shirts page is opened'
+		current_url = browser.current_url
+		tplevelmenu_tab.tshirts.click
+		search_page.wait_for{ current_url != browser.current_url }
+		expect(tplevelmenu_tab.url_include?('http://automationpractice.com/index.php?id_category=5&controller=category').on page? (true)
+	end
   end
 end
