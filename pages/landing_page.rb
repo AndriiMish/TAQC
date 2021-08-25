@@ -4,6 +4,6 @@ class LandingPage < BasePage
   end
   
   def  women_button
-    browser.find_element(class: '')
+    browser.find_element(xpath: "//a[@title="Women"]")
   end
 end
