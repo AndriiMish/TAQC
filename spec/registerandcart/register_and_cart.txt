@@ -1,0 +1,19 @@
+'Register'
+
+1. Verify that user can log in.
+2. Verify that the 'email' field is validated.
+3. Verify that the 'password' field is validated
+4. Verify that user can`t log in with invalid email
+5. Verify that user can`t log in with invalid password.
+6. Verify that user can restore password.
+--------------------------------------------------------------
+
+'Cart'
+
+1. Verify that user can add an item to cart.
+2. Verify that user can click on 'Proceed to checkout' button and all the steps to purchase.
+3. Verify that user can add 100 items to the 'Cart'.
+4. Verify 'Cart' button is displayed on every page.
+5. Verify clicking on any item's 'Add to cart' button adds this item to the Cart.
+6. Verify that previously added items is avaliable in 'Cart'.
+7. Verify that after log out, items no more displyed in 'Cart'.
