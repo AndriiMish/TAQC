@@ -7,4 +7,5 @@ class ContactUsPage
   def on_page?
     browser.current_url.include? 'contact'
   end
+
 end
