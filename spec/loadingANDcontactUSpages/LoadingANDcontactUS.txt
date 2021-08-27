@@ -1,14 +1,22 @@
 1) Contact us page
 Verify user is redirected to 'Contact us' page after clicking on 'Contact us' button on Landing page
-Verify that user can choose file in 'Attach File' field
+Verify that user can attach file in 'Attach File' field
 Verify that user can change 'Subject Heading' dropdown menu
 Verify that user can send a message with entered valid data
 Verify that user can't send a message without entered data
 
 2) Loading page
+
 Verify that user can see top level menu
 Verify that user can see 'Cart'
 Verify that 'POPULAR' tab is opened
 Verify that user can open 'BEST SELLERS' tab 
+=======
+Verify that top level menu is displayed on 'Loading' page
+Verify that 'Cart' is displayed on 'Loading' page
+Verify that 'POPULAR' tab is opened on 'Loading' page
+Verify that 'BEST SELLERS' tab is opened after choosing 'BEST SELLERS'
+Verify that 'BEST SELLERS' is displayed on 'Loading' page
+
 Verify that user can click on items
 Verify upon user clicking 'Follow us on Facebook', he is redirected to Facebook login page
