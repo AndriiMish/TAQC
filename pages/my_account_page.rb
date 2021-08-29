@@ -1,13 +1,9 @@
-<<<<<<< HEAD
-class MyAccountPage
-    def on_page?
-      browser.current_url.include? 'my-account'
-    end
-  end
-=======
 class MyAccountPage < BasePage
-  def on_page?
-    browser.current_url.include? 'my-account'
+ 
+  def click_on(value)
+    desired_link = browser.find_element(xpath: "//a[@title= \"#{value}\"]")
+    desired_link.click
   end
+
 end
->>>>>>> master
+
