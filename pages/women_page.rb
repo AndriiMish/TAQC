@@ -164,4 +164,16 @@ end
 
 #????????????????
 
+filters = ["Categories", "Size", "Color", "Composition", "Styles", 
+"Properties", "Availability", "Manufacturer", "Condition"]
+
+def categories_filter(name_filter)
+    sidebar.select { |filter| filter.text == 'Categories'}
+end
+
+private
+def sidebar
+    browser.find_element(class: 'layered_subtitle')
+end
+
 end

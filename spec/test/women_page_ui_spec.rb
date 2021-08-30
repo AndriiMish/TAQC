@@ -33,6 +33,7 @@ RSpec.describe 'Women page' do
 
     it 'verifies color filter displayed with options' do
       expect(women_page.color_filter.text).to eq("Color")
+      
     end
 
     it 'verifies compositions filter displayed with options' do
