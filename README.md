@@ -1,2 +1,0 @@
-# TAQC
-Framework for TAQC
