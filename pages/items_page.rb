@@ -33,4 +33,53 @@ class ItemsPage < BasePage
   def cart_btn
 	browser.find_element(class: 'exclusive')
   end
+  
+  def fullscr_photo
+	browser.find_element(class: 'fancybox-outer')
+  end
+  
+  def fullscr_nxt
+	browser.find_element(class: 'fancybox-nav fancybox-next')
+  end
+  
+  def fullscr_prev
+	browser.find_element(class: 'fancybox-nav fancybox-prev')
+  end
+  
+  def fullscr_cls
+	browser.find_element(class: 'fancybox-item fancybox-close')
+  end
+  
+  def tweet
+	browser.find_element(class: 'btn btn-default btn-twitter')
+  end
+  
+  def penter
+	browser.find_element(class: 'fancybox-nav fancybox-prev')
+  end
+  
+  def facebook
+	browser.find_element(class: 'btn btn-default btn-facebook')
+  end
+  
+  def google
+	browser.find_element(class: 'btn btn-default btn-google-plus')
+  end
+  
+  def sub_photos
+	browser.find_element(class: 'thumbs_list_frame')
+  end
+  
+  def view_scroll
+	browser.find_element(id: 'view_scroll_right')
+  end 
+  
+  def subphoto
+	browser.find_element(id: 'thumb_2')
+  end
+  
+  def view_scroll_lft
+	browser.find_element(id: 'view_scroll_left')
+  end
+  
 end
