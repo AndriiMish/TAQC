@@ -1,8 +1,12 @@
 class MyAccountPage < BasePage
  
-  def click_on(value)
-    desired_link = browser.find_element(xpath: "//a[@title= \"#{value}\"]")
-    desired_link.click
+  def button(name)
+    browser.find_element(xpath: "//a[@title= \"#{name}\"]")
+  end
+
+  def click_on(name, link, page)
+    button(name).click
+    wait_for{ page.url_include?(link) }
   end
 
 end
