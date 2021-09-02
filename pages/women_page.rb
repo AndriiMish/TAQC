@@ -7,95 +7,106 @@ class WomenPage
     end
 
 #TITLES OF CATEGORIES
+    def filter_finding(text)
+        browser.find_element(xpath: "//span[contains(@class,'layered_subtitle') and text()='#{text}']")
+    end
+
     def categories_filter
-        browser.find_element(xpath: "//span[contains(@class,'layered_subtitle') and text()='Categories']")
+        filter_finding("Categories")
     end
 
     def size_filter
-        browser.find_element(xpath: "//span[contains(@class,'layered_subtitle') and text()='Size']")
+        filter_finding("Size")
     end
 
     def color_filter
-        browser.find_element(xpath: "//span[contains(@class,'layered_subtitle') and text()='Color']")
+        filter_finding("Color")
     end
 
     def compositions_filter
-        browser.find_element(xpath: "//span[contains(@class,'layered_subtitle') and text()='Compositions']")
+        filter_finding("Compositions")
     end
 
     def styles_filter
-        browser.find_element(xpath: "//span[contains(@class,'layered_subtitle') and text()='Styles']")
+        filter_finding("Styles")
     end
 
     def properties_filter
-        browser.find_element(xpath: "//span[contains(@class,'layered_subtitle') and text()='Properties']")
+        filter_finding("Properties")
     end
 
     def availability_filter
-        browser.find_element(xpath: "//span[contains(@class,'layered_subtitle') and text()='Availability']")
+        filter_finding("Availability")
     end
 
     def manufacturer_filter
-        browser.find_element(xpath: "//span[contains(@class,'layered_subtitle') and text()='Manufacturer']")
+        filter_finding("Manufacturer")
     end
 
     def condition_filter
-        browser.find_element(xpath: "//span[contains(@class,'layered_subtitle') and text()='Condition']")
+        filter_finding("Condition")
     end
 
 #OPTIONS OF CATEGORIES
     def categories_filter_tops
-        browser.find_element(xpath: "//label/a[text()='Tops']")
+        #browser.find_element(xpath: "//label/a[text()='Tops']")
+        browser.find_element(css:"#ul_layered_category_0 label[for='layered_category_4']")
     end
 
     def categories_filter_dresses
-        browser.find_element(xpath: "//label/a[text()='Dresses']")
+        browser.find_element(css:"#ul_layered_category_0 label[for='layered_category_8']")
     end
 
 #OPTIONS OF SIZE
     def size_filter_s
-        browser.find_element(xpath: "//label/a[text()='S']")
+        browser.find_element(css:"#ul_layered_id_attribute_group_1 label[for='layered_id_attribute_group_1']")
     end
 
     def size_filter_m
-        browser.find_element(xpath: "//label/a[text()='M']")
+        browser.find_element(css:"#ul_layered_id_attribute_group_1 label[for='layered_id_attribute_group_2']")
     end
 
     def size_filter_l
-        browser.find_element(xpath: "//label/a[text()='L']")
+        browser.find_element(css:"#ul_layered_id_attribute_group_1 label[for='layered_id_attribute_group_3']")
     end
 
 # OPTIONS OF COLOR
+def color_finding(val)
+    browser.find_element(css:"#ul_layered_id_attribute_group_3 label[for='layered_id_attribute_group_#{val}']")
+end
+
 def color_filter_beige
-    browser.find_element(xpath: "//label/a[text()='Beige']")
+    #browser.find_element(xpath: "//label/a[text()='Beige']")
+    #browser.find_element(css:"#ul_layered_id_attribute_group_3 label[for='layered_id_attribute_group_7']")
+    color_finding(7)
 end
 
 def color_filter_white
-    browser.find_element(xpath: "//label/a[text()='White']")
+    color_finding(8)
 end
 
 def color_filter_black
-    browser.find_element(xpath: "//label/a[text()='Black']")
+    color_finding(11)
 end
 
 def color_filter_orange
-    browser.find_element(xpath: "//label/a[text()='Orange']")
+    color_finding(13)
 end
 
 def color_filter_blue
-    browser.find_element(xpath: "//label/a[text()='Blue']")
+    color_finding(14)
 end
 
 def color_filter_green
-    browser.find_element(xpath: "//label/a[text()='Green']")
+    color_finding(15)
 end
 
 def color_filter_yellow
-    browser.find_element(xpath: "//label/a[text()='Yellow']")
+    color_finding(16)
 end
 
 def color_filter_pink
-    browser.find_element(xpath: "//label/a[text()='Pink']")
+    color_finding(24)
 end
 
 # OPTIONS OF COMPOSITIONS
@@ -161,19 +172,5 @@ def condition_filter_new
 end
 
 # OPTIONS OF PRICE
-
-#????????????????
-
-filters = ["Categories", "Size", "Color", "Composition", "Styles", 
-"Properties", "Availability", "Manufacturer", "Condition"]
-
-def categories_filter(name_filter)
-    sidebar.select { |filter| filter.text == 'Categories'}
-end
-
-private
-def sidebar
-    browser.find_element(class: 'layered_subtitle')
-end
 
 end
