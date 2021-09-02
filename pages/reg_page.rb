@@ -9,6 +9,14 @@ class RegPage < BasePage
     browser.find_element(id: 'email_create')
   end
 
+  def home_bttn
+    browser.find_element(class: 'home')
+  end
+
+  def log_form
+    browser.find_element(id: 'login_form')
+  end
+
   def submt_button
     browser.find_element(id: 'SubmitCreate')
   end
@@ -32,7 +40,6 @@ class RegPage < BasePage
     browser.find_element(id: 'uniform-id_gender1')
   end
 
-
   def reg_input(reg_data)
     browser.find_element(id: 'uniform-id_gender1').click
     browser.find_element(id: 'customer_firstname').send_keys(reg_data['first'])
@@ -50,23 +57,16 @@ class RegPage < BasePage
     browser.find_element(id: 'alias').send_keys(reg_data['alis'])
   end
 
-  def clearall
-    browser.find_element(id: 'customer_firstname').clear
-    browser.find_element(id: 'customer_lastname').clear
-    browser.find_element(id: 'passwd').clear
-    browser.find_element(id: 'address1').clear
-    browser.find_element(id: 'city').clear
-    browser.find_element(id: 'postcode').clear
-    browser.find_element(id: 'phone_mobile').clear
-    browser.find_element(id: 'alias').clear
-  end
-
   def fname
     browser.find_element(id: 'customer_firstname')
   end
 
-  def refresh_em
-    browser.find_element(id: 'customer_firstname').send_keys(reg_data['first'])
+  def lname
+    browser.find_element(id: 'customer_lastname')
+  end
+
+  def alert_mes
+    browser.find_element(class: 'alert-danger')
   end
 
   def login_user(email, password)
@@ -79,10 +79,16 @@ class RegPage < BasePage
     browser.find_element(id: 'submitAccount')
   end
 
+  def sign_out
+    browser.find_element(class: 'logout')
+  end
+
   def ref
     browser.get("http://automationpractice.com/index.php?controller=authentication&back=my-account#account-creation");
     browser.navigate.refresh
   end
+
+
 
   def on_page?
     page_title.include?(PAGE_TITLE)
