@@ -7,3 +7,4 @@ class LandingPage < BasePage
     browser.find_element(xpath: "//a[@title='Women']")
   end
 end
+
