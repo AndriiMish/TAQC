@@ -7,7 +7,7 @@ RSpec.describe 'Landing page' do
 
     before(:all) do
         browser.get(HOME_PAGE)
-     end
+    end
 
     after(:all) { browser.close }
 

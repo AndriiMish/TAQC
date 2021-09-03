@@ -42,6 +42,7 @@ RSpec.describe 'My account page - buttons' do
     expect(landing_page.url_include?(HOME_PAGE)).to be(true)
   end
 
+  
   it 'verify that User can redirect to "Sign Out" page' do
     my_account_page.sign_out_button.click
     expect(sign_in_page.page_title).to eq('AUTHENTICATION')

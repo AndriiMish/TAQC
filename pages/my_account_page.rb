@@ -9,8 +9,6 @@ class MyAccountPage < BasePage
     wait_for{ page.url_include?(link) }
   end
 
-<<<<<<< HEAD
-=======
   def sign_out_button
     browser.find_element(class: 'logout')
   end
@@ -19,6 +17,5 @@ class MyAccountPage < BasePage
     browser.find_element(class: 'icon-home')
   end
 
->>>>>>> auth
 end
 
