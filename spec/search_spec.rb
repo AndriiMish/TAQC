@@ -26,6 +26,7 @@ RSpec.describe 'Search tab' do
   
   context 'when valid credentials' do
     it 'verifies user can use search by existed data' do
+	  search_page.search_input.clear
       data = 't-shirt'
       search_page.enter_data(data)
 	  search_page.search_btn.click
@@ -94,7 +95,8 @@ RSpec.describe 'Search tab' do
 		expect(search_page.search_label.text) == 'Search'
 	end
   end
-	context 'Security checking' do
+
+context 'Security checking'
 	it 'verifies that after entering SQL request in the search field alert message will be described' do
 		data = 'SELECT * FROM Data WHERE name = "t-shirt"'
 		search_page.enter_data(data)
@@ -110,4 +112,3 @@ RSpec.describe 'Search tab' do
 	end
   end	
 end
-

@@ -53,6 +53,10 @@ RSpec.describe 'TopLevelMenu tab' do
 		tplevelmenu_tab.wait_for{ current_url != browser.current_url }
 		expect(tplevelmenu_tab.tshirts_label.displayed?).to be(true)
 	end
+    
+    it 'verify that all tab with buttons is displayed' do
+      expect(tplevelmenu_tab.tplm_bar.displayed?).to be(true)
+    end
   end
 
   context 'with valid credentials' do

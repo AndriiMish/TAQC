@@ -9,6 +9,14 @@ class RegPage < BasePage
     browser.find_element(id: 'email_create')
   end
 
+  def home_bttn
+    browser.find_element(class: 'home')
+  end
+
+  def log_form
+    browser.find_element(id: 'login_form')
+  end
+
   def submt_button
     browser.find_element(id: 'SubmitCreate')
   end
@@ -31,7 +39,6 @@ class RegPage < BasePage
   def marked_field
     browser.find_element(id: 'uniform-id_gender1')
   end
-
 
   def reg_input(reg_data)
     browser.find_element(id: 'uniform-id_gender1').click
@@ -68,6 +75,14 @@ class RegPage < BasePage
   def refresh_em
     browser.find_element(id: 'customer_firstname').send_keys(reg_data['first'])
   end
+  
+  def lname
+    browser.find_element(id: 'customer_lastname')
+  end
+
+  def alert_mes
+    browser.find_element(class: 'alert-danger')
+  end
 
   def login_user(email, password)
     email_input.send_keys(email)
@@ -77,6 +92,10 @@ class RegPage < BasePage
 
   def done_button
     browser.find_element(id: 'submitAccount')
+  end
+
+  def sign_out
+    browser.find_element(class: 'logout')
   end
 
   def ref
