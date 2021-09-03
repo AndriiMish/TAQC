@@ -1,5 +1,5 @@
-[‘Main’ page] Verify if 'Sign in' button is displayed if User is not signed in.
-[‘Main’ page] Verify upon clicking on ‘Sign in' button User is redirected to ‘Authentication’ page.
+[‘Landing’ page] Verify if 'Sign in' button is displayed if User is not signed in.
+[‘Landing’ page] Verify upon clicking on ‘Sign in' button User is redirected to ‘Authentication’ page.
 
 ---------
 
@@ -63,6 +63,6 @@ Invalid:
 
 ---------
 
-[‘Main’ page] Verify if 'Sign out' button is displayed if User is signed in.
-[‘Main’ page] Verify upon clicking ‘Sign out’ button is redirected to ‘Authentication’ page.
+[‘My Account’ page] Verify if 'Sign out' button is displayed if User is signed in.
+[‘My Account’ page] Verify upon clicking ‘Sign out’ button is redirected to ‘Authentication’ page.
 
