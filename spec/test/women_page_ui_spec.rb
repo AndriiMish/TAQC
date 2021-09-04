@@ -4,7 +4,7 @@ RSpec.describe 'Women page' do
   landing_page = LandingPage.new
   women_page = WomenPage.new
 
-  titles = ["Categories", "Size", "Color", "Compositions", "Styles", "Properties", "Availability", "Manufacturer", "Condition"]
+  titles = ["Categories", "Size", "Color", "Compositions", "Styles", "Properties", "Availability", "Manufacturer", "Condition", 'Price', 'Subcategories']
   categories = ['Tops', 'Dresses']
   size = ['S', 'M', 'L']
   color = ["Beige", "White", "Black", "Orange", "Blue", "Green", "Yellow", "Pink"]
