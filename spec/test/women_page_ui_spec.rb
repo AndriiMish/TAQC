@@ -4,9 +4,9 @@ RSpec.describe 'Women page' do
   landing_page = LandingPage.new
   women_page = WomenPage.new
 
-  titles = ["Categories", "Size", "Color", "Compositions", "Styles", "Properties", "Availability", "Manufacturer", "Condition", "Price", "Subcategories"]
-  categories = ["Tops", "Dresses"]
-  size = ["S", "M", "L"]
+  titles = ["Categories", "Size", "Color", "Compositions", "Styles", "Properties", "Availability", "Manufacturer", "Condition"]
+  categories = ['Tops', 'Dresses']
+  size = ['S', 'M', 'L']
   color = ["Beige", "White", "Black", "Orange", "Blue", "Green", "Yellow", "Pink"]
   compositions = ["Cotton", "Polyester", "Viscose"]
   styles = ["Casual", "Dressy", "Girly"]
@@ -16,9 +16,9 @@ RSpec.describe 'Women page' do
   condition = ["New"]
   price = ["Range"]
   subcategories = ["TOPS", "DRESSES"]
-    
+
   before(:all) do
-    browser.get(HOME_PAGE)
+    get_home_page
     landing_page.women_button.click
   end
 
