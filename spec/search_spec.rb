@@ -5,26 +5,25 @@ RSpec.describe 'Search tab' do
 
   before(:all) do
     browser.get(HOME_PAGE)
-	search_page.search_input.clear
+    search_page.search_input.clear
   end
-  
+
 
   after(:all) { browser.close }
-  
+
   context 'UI search field check' do
+  # UI testing
     it 'verify that search field is displayed' do
       expect(search_page.search_input.displayed?).to be(true)
-	end
-  
+    end
 
-	it 'verify that search button is displayed' do
-		expect(search_page.search_btn.displayed?).to be(true)
-	end
-	
-	
+    it 'verify that search button is displayed' do
+		  expect(search_page.search_btn.displayed?).to be(true)
+	  end
   end
-  
+
   context 'when valid credentials' do
+   # Functional positive testing 
     it 'verifies user can use search by existed data' do
 	  search_page.search_input.clear
       data = 't-shirt'
@@ -35,6 +34,7 @@ RSpec.describe 'Search tab' do
   end
   
 	context 'when invalid credentials' do
+	# Functional negative testing
 		it 'verifies user request will be described in the url field' do
 		data = 'asdsadsada'
 		search_page.enter_data(data)
@@ -79,6 +79,7 @@ RSpec.describe 'Search tab' do
   end
 	
   context 'UI results checking' do
+	# UI Testing on the results page
     it 'after clicking on the search button with empty field the alert message shows' do
       expect(search_page.alert.displayed?).to be(true)
 	end
@@ -97,6 +98,7 @@ RSpec.describe 'Search tab' do
   end
 
 context 'Security checking'
+	# Security testing
 	it 'verifies that after entering SQL request in the search field alert message will be described' do
 		data = 'SELECT * FROM Data WHERE name = "t-shirt"'
 		search_page.enter_data(data)
@@ -110,5 +112,4 @@ context 'Security checking'
 		search_page.search_btn.click
 		expect(search_page.alert.displayed?).to be(true)
 	end
-  end	
 end
