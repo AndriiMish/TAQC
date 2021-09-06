@@ -74,6 +74,10 @@ RSpec.describe 'Items page' do
 	it 'verifies that send to friend button is displayed' do
 		expect(items_page.friend_btn.displayed?).to be(true)
 	end
+	
+	it 'verifies that fullscreen is disabled' do
+		expect(items_page.fullscr_exs?).to be(false)
+	end
 
   end
   
@@ -105,7 +109,6 @@ RSpec.describe 'Items page' do
 		items_page.size_sub.click
 		expect(items_page.size.text) == 'M'
 	end
-	
 	
 	
 	it 'verifies that user can click on the photo on the subphotos' do

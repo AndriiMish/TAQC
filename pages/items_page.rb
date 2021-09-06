@@ -12,6 +12,10 @@ class ItemsPage < BasePage
 	quantity.send_keys(data)
   end
   
+  def fullscr_exs?
+	!browser.find_elements(xpath: '//body/div[@class = "fancybox-wrap fancybox-desktop fancybox-type-image fancybox-opened"]').empty?
+  end
+  
   def asc_btn
 	browser.find_element(xpath:'//a[@class="btn btn-default button-plus product_quantity_up"]')
   end
