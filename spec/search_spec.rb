@@ -5,26 +5,23 @@ RSpec.describe 'Search tab' do
 
   before(:all) do
     browser.get(HOME_PAGE)
-	search_page.search_input.clear
+    search_page.search_input.clear
   end
-  
+
 
   after(:all) { browser.close }
-  
+
   context 'UI search field check' do
   # UI testing
     it 'verify that search field is displayed' do
       expect(search_page.search_input.displayed?).to be(true)
-	end
-  
+    end
 
-	it 'verify that search button is displayed' do
-		expect(search_page.search_btn.displayed?).to be(true)
-	end
-	
-	
+    it 'verify that search button is displayed' do
+		  expect(search_page.search_btn.displayed?).to be(true)
+	  end
   end
-  
+
   context 'when valid credentials' do
    # Functional positive testing 
     it 'verifies user can use search by existed data' do
@@ -115,5 +112,4 @@ context 'Security checking'
 		search_page.search_btn.click
 		expect(search_page.alert.displayed?).to be(true)
 	end
-  end	
 end
