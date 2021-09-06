@@ -4,18 +4,18 @@ RSpec.describe 'Women page' do
   landing_page = LandingPage.new
   women_page = WomenPage.new
 
-  titles = ["Categories", "Size", "Color", "Compositions", "Styles", "Properties", "Availability", "Manufacturer", "Condition", 'Price', 'Subcategories']
+  titles = ['Categories', 'Size', 'Color', 'Compositions', 'Styles', 'Properties', 'Availability', 'Manufacturer', 'Condition', 'Price', 'Subcategories']
   categories = ['Tops', 'Dresses']
   size = ['S', 'M', 'L']
-  color = ["Beige", "White", "Black", "Orange", "Blue", "Green", "Yellow", "Pink"]
-  compositions = ["Cotton", "Polyester", "Viscose"]
-  styles = ["Casual", "Dressy", "Girly"]
-  properties = ["Colorful Dress", "Maxi Dress", "Midi Dress", "Short Dress", "Short Sleeve"]
-  availability = ["In stock"]
-  manufacturer = ["Fashion Manufacturer"]
-  condition = ["New"]
-  price = ["Range"]
-  subcategories = ["TOPS", "DRESSES"]
+  color = ['Beige', 'White', 'Black', 'Orange', 'Blue', 'Green', 'Yellow', 'Pink']
+  compositions = ['Cotton', 'Polyester', 'Viscose']
+  styles = ['Casual', 'Dressy', 'Girly']
+  properties = ['Colorful Dress', 'Maxi Dress', 'Midi Dress', 'Short Dress', 'Short Sleeve']
+  availability = ['In stock']
+  manufacturer = ['Fashion Manufacturer']
+  condition = ['New']
+  price = ['Range']
+  subcategories = ['TOPS', 'DRESSES']
 
   before(:all) do
     get_home_page
