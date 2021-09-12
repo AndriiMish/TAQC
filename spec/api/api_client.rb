@@ -1,4 +1,5 @@
 require 'faraday'
+
 class ApiClient
   APP_JS = 'application/json'
   DEFAULT_USER = 'taqc_default'
@@ -11,10 +12,14 @@ class ApiClient
     app_request(:get, @base_url + "#{username}")
   end
 
+  def generate_random_username
+    username = SecureRandom.hex
+  end
+
   def generate_random_body
     {
         "id": rand(1000),
-        "username": "user_#{SecureRandom.hex}",
+        "username": "user_#{generate_random_username}",
         "firstName": SecureRandom.hex,
         "lastName": SecureRandom.hex,
         "email": "#{SecureRandom.hex}@gmail.com",
