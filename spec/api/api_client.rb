@@ -16,10 +16,20 @@ class ApiClient
     username = SecureRandom.hex
   end
 
-  def generate_random_body
+  def generate_random_long_username
+    username = SecureRandom.alphanumeric(256)
+  end
+
+  def generate_random_symbol_username
+    symbols = ['!', '@', '$', '%', '#', '^', '&', '*', '(', ')', '_', '=', '+']
+    username = ''
+    rand(4..16).times { username << symbols[rand(0...symbols.size)] }
+  end
+
+  def generate_random_body(name)
     {
         "id": rand(1000),
-        "username": "user_#{generate_random_username}",
+        "username": "user_#{name}",
         "firstName": SecureRandom.hex,
         "lastName": SecureRandom.hex,
         "email": "#{SecureRandom.hex}@gmail.com",
