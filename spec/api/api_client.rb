@@ -12,10 +12,6 @@ class ApiClient
     app_request(:get, @base_url + "#{username}")
   end
 
-  def generate_random_username
-    username = SecureRandom.hex
-  end
-
   def generate_random_long_username
     username = SecureRandom.alphanumeric(256)
   end
