@@ -26,10 +26,10 @@ class ApiClient
     rand(4..16).times { username << symbols[rand(0...symbols.size)] }
   end
 
-  def generate_random_body(name)
+  def generate_random_body
     {
         "id": rand(1000),
-        "username": "user_#{name}",
+        "username": "user_#{SecureRandom.hex}",
         "firstName": SecureRandom.hex,
         "lastName": SecureRandom.hex,
         "email": "#{SecureRandom.hex}@gmail.com",
