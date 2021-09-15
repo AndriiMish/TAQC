@@ -16,6 +16,7 @@ RSpec.describe 'Login ->logout -> Get' do
     end
 
     it 'user can logout' do
+      app_cl.user_login(body[:username], body[:password])
       response = app_cl.user_logout
       expect(response.status).to eq(200)
     end
