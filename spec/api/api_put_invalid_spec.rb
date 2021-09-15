@@ -132,31 +132,31 @@ RSpec.describe 'Create -> Login -> Get' do
         it 'verifies user can update with 1 symbol' do
             body[:lastName] = 'F'
             response = app_cl.update_user(body[:username], body)
-            expect(response.status).to eq(400)
+            expect(response.status).to eq(500)
         end
 
         it 'verifies user can update with empty field' do
             body[:lastName] = ""
             response = app_cl.update_user(body[:username], body)
-            expect(response.status).to eq(400)
+            expect(response.status).to eq(500)
         end
 
         it 'verifies user can update with specials symbols' do
             body[:lastName] = '@/#$)'
             response = app_cl.update_user(body[:lusername], body)
-            expect(response.status).to eq(400)
+            expect(response.status).to eq(500)
         end
 
         it 'verifies user can update with 50 letters' do
             body[:lastName] = 'X' * 50
             response = app_cl.update_user(body[:username], body)
-            expect(response.status).to eq(400)
+            expect(response.status).to eq(500)
         end
 
         it 'verifies user can update with numerical values' do
             body[:lastName] = 123456
             response = app_cl.update_user(body[:username], body)
-            expect(response.status).to eq(400)
+            expect(response.status).to eq(500)
         end
     end
 
@@ -165,31 +165,31 @@ RSpec.describe 'Create -> Login -> Get' do
         it 'verifies user can update with 1 symbol' do
             body[:email] = 'F'
             response = app_cl.update_user(body[:username], body)
-            expect(response.status).to eq(400)
+            expect(response.status).to eq(500)
         end
 
         it 'verifies user can update with empty field' do
             body[:email] = ""
             response = app_cl.update_user(body[:username], body)
-            expect(response.status).to eq(400)
+            expect(response.status).to eq(500)
         end
 
         it 'verifies user can update with specials symbols' do
             body[:email] = '@/#$)'
             response = app_cl.update_user(body[:username], body)
-            expect(response.status).to eq(400)
+            expect(response.status).to eq(500)
         end
 
         it 'verifies user can update with 50 letters' do
             body[:email] = 'X' * 50
             response = app_cl.update_user(body[:username], body)
-            expect(response.status).to eq(400)
+            expect(response.status).to eq(500)
         end
 
         it 'verifies user can update with numerical values' do
             body[:email] = 123456
             response = app_cl.update_user(body[:username], body)
-            expect(response.status).to eq(400)
+            expect(response.status).to eq(500)
         end
     end
 
@@ -199,31 +199,31 @@ RSpec.describe 'Create -> Login -> Get' do
         it 'verifies user can update with 1 symbol' do
             body[:password] = 'F'
             response = app_cl.update_user(body[:username], body)
-            expect(response.status).to eq(400)
+            expect(response.status).to eq(500)
         end
 
         it 'verifies user can update with empty field' do
             body[:password] = ""
             response = app_cl.update_user(body[:username], body)
-            expect(response.status).to eq(400)
+            expect(response.status).to eq(500)
         end
 
         it 'verifies user can update with specials symbols' do
             body[:password] = '@/#$)'
             response = app_cl.update_user(body[:username], body)
-            expect(response.status).to eq(400) 
+            expect(response.status).to eq(500) 
         end
 
         it 'verifies user can update with 50 letters' do
             body[:password] = 'X' * 50
             response = app_cl.update_user(body[:username], body)
-            expect(response.status).to eq(400)
+            expect(response.status).to eq(500)
         end
 
         it 'verifies user can update with numerical values' do
             body[:password] = 1
             response = app_cl.update_user(body[:username], body)
-            expect(response.status).to eq(400)
+            expect(response.status).to eq(500)
         end
     end
 
@@ -231,37 +231,37 @@ RSpec.describe 'Create -> Login -> Get' do
         it 'verifies user can update with 1 symbol' do
             body[:password] = 'Fly'
             response = app_cl.update_user(body[:username], body)
-            expect(response.status).to eq(400)#!
+            expect(response.status).to eq(500)
         end
 
         it 'verifies user can update with empty field' do
             body[:password] = ""
             response = app_cl.update_user(body[:username], body)
-            expect(response.status).to eq(400)
+            expect(response.status).to eq(500)
         end
 
         it 'verifies user can update with specials symbols' do
             body[:password] = '@/#$)'
             response = app_cl.update_user(body[:username], body)
-            expect(response.status).to eq(400) 
+            expect(response.status).to eq(500) 
         end
 
         it 'verifies user can update with 50 letters' do
             body[:password] = 'X' * 50
             response = app_cl.update_user(body[:username], body)
-            expect(response.status).to eq(400)
+            expect(response.status).to eq(500)
         end
 
         it 'verifies user can update with numerical values' do
             body[:password] = 1
             response = app_cl.update_user(body[:username], body)
-            expect(response.status).to eq(400)
+            expect(response.status).to eq(500)
         end
 
         it 'verifies user can update with mixed values' do
             body[:password] = 'cre@2k'
             response = app_cl.update_user(body[:username], body)
-            expect(response.status).to eq(400)
+            expect(response.status).to eq(500)
         end
     end
 
@@ -269,31 +269,31 @@ RSpec.describe 'Create -> Login -> Get' do
         it 'verifies user can update with negative values' do
             body[:userStatus] = -5
             response = app_cl.update_user(body[:username], body)
-            expect(response.status).to eq(400)
+            expect(response.status).to eq(500)
         end
 
         it 'verifies user can update with alphabetical value' do
             body[:userStatus] = "Netw"
             response = app_cl.update_user(body[:username], body)
-            expect(response.status).to eq(400)
+            expect(response.status).to eq(500)
         end
 
         it 'verifies user can update with empty field' do
             body[:userStatus] = ""
             response = app_cl.update_user(body[:username], body)
-            expect(response.status).to eq(400)
+            expect(response.status).to eq(500)
         end
 
         it 'verifies user can update with specials symbols' do
             body[:userStatus] = '@/#$)'
             response = app_cl.update_user(body[:username], body)
-            expect(response.status).to eq(400)
+            expect(response.status).to eq(500)
         end
 
         it 'verifies user can update with length 50 symbols' do
             body[:userStatus] = '3' * 50
             response = app_cl.update_user(body[:username], body)
-            expect(response.status).to eq(400)
+            expect(response.status).to eq(500)
         end
     end
 end
