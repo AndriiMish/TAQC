@@ -23,16 +23,24 @@ RSpec.describe 'Login ->logout -> Get' do
       response = app_cl.user_logout
       expect(response.status).to eq(200)
     end
+	
+	it 'user can not get data in the unlogged status' do
+      app_cl.user_login(body[:username], body[:password])
+	  app_cl.user_logout
+	  response = app_cl.get_user(body[:username])
+	  expect(response.status).to eq(404)
+	end
 
   end
 
   context 'Negative login-logout tests' do
-	# Errors in the test
+	# Perhaps bug
     xit 'two times in row' do
       app_cl.user_login(body[:username], body[:password])
 	  app_cl.user_logout
-      response = app_cl.user_logout
-      expect(response.status).to eq(403)
+      app_cl.user_logout
+	  response = app_cl.get_user(body[:username])
+      expect(response.status).to eq(401)
     end
   end
 
