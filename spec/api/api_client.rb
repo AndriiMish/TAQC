@@ -12,16 +12,6 @@ class ApiClient
     app_request(:get, @base_url + "#{username}")
   end
 
-  def generate_random_long_username
-    username = SecureRandom.alphanumeric(256)
-  end
-
-  def generate_random_symbol_username
-    symbols = ['!', '@', '$', '%', '#', '^', '&', '*', '(', ')', '_', '=', '+']
-    username = ''
-    rand(4..16).times { username << symbols[rand(0...symbols.size)] }
-  end
-
   def generate_random_body
     {
         "id": rand(1000),
