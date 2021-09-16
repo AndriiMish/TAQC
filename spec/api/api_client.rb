@@ -9,9 +9,6 @@ class ApiClient
     @base_url = 'https://petstore.swagger.io/v2/user/'
   end
 
-  APP_JS = "application/json"
-  DEFAULT_PAGE = "https://petstore.swagger.io/v2/user/"
-
   def get_user(username)
     app_request(:get, @base_url + "#{username}")
   end
