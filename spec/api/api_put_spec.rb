@@ -44,7 +44,7 @@ RSpec.describe 'PUT method checking to the any data in the body' do
 							  
 				api_cl.create_user(body)
 				valid_body.each_pair{|key, value| 
-				it 'verifies that user can edit any data by using valid data' do
+				it 'verifies that user can edit any data by using valid data to the existed user' do
 					body[key] = value
 					api_cl.update_user(body[key], body)
 					api_cl.user_login(body[:username], body[:password])
@@ -52,18 +52,22 @@ RSpec.describe 'PUT method checking to the any data in the body' do
 					expect(response.status).to eq(200)
 					api_cl.user_logout()
 				end}
-				api_cl.delete_user(body[:username])	
 				
 				
-				# Negative Functional testing
-				it 'verifies that created user can be edited by using mixed data' do
+				
+				
+				#api_cl.delete_user(body[:username])	
+				
+				
+	# Negative Functional testing			
+				xit 'verifies that created user can not be edited by using mixed data in the all fields' do
 					sub_body = api_cl.generate_random_body
 					sub_body.each_pair{|key, value| body[key] = value
 					api_cl.update_user(body[key], body)}
 					
 					api_cl.user_login(body[:username], body[:password])
 					response = api_cl.get_user(body[:username])
-					expect(response.status).to eq(400)
+					expect(response.status).to eq(404)
 					api_cl.user_logout()
 					api_cl.delete_user(body[:username])	
 				end
@@ -71,37 +75,31 @@ RSpec.describe 'PUT method checking to the any data in the body' do
 				sub_body = api_cl.generate_random_body
 				
 				sub_body.each_pair{|key, value| 
-					it 'verifies that user can edit any data by using mixed data' do
+					xit 'verifies that user can not edit any field by using mixed data' do
 						api_cl.create_user(body)
 						body[key] = value
 						api_cl.update_user(body[key], body)
 						api_cl.user_login(body[:username], body[:password])
 						response = api_cl.get_user(body[:username])
-						expect(response.status).to eq(400)
+						expect(response.status).to eq(404)
 						api_cl.user_logout()
 						api_cl.delete_user(body[:username])	
 					end}
 				
-				it 'verifies that user can be edited by using numbers' do
+				xit 'verifies that user can not be edited by using numbers in the all fields' do
 					api_cl.create_user(body)
 					body.each_pair{|key, value| body[key].is_a?(Integer) ? body[key] += 1 : body[key] += '1'
 					api_cl.update_user(body[key], body)}
 					api_cl.user_login(body[:username], body[:password])
 					response = api_cl.get_user(body[:username])
-					expect(response.status).to eq(400)
+					expect(response.status).to eq(404)
 					api_cl.user_logout()
 					api_cl.delete_user(body[:username])		
 				end
 				
-				xit 'verifies that user can be edited by using symbols' do
-					api_cl.create_user(body)
-					body.each_pair{|key, value| body[key] += '#' if !body[key].is_a?(Integer)
-					api_cl.update_user(body[key], body)}
-					api_cl.user_login(body[:username], body[:password])
-					response = api_cl.get_user(body[:username])
-					expect(response.status).to eq(400)
-					api_cl.user_logout()
-					api_cl.delete_user(body[:username])		
+				xit 'verifies that unexisted user can not be edited ' do
+					response = api_cl.update_user('dwarf', sub_body)
+					expect(response.status).to eq(404)
 				end
 			
 		end
