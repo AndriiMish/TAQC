@@ -30,7 +30,7 @@ RSpec.describe 'Create -> Login -> Get' do
         "negative values": -5,
         "empty field": " ",
         "specials symbols": "@/#$)",
-        "length 50 symbols": "k" * 50,
+        "length 51 letters": "k" * 51,
         "mixed values": "@#-5/Dark"
     }
     
@@ -50,32 +50,32 @@ RSpec.describe 'Create -> Login -> Get' do
         it 'verifies user can not update username with empty field' do
             invalid_username = ''
             response = app_cl.update_user(body[:username], app_cl.adjust_body(username: invalid_username))
-            expect(response.status).to eq(400)
+            expect(response.status).to eq(500)
         end
 
         it 'verifies user can not update username with negative values' do
             invalid_username = -1
             response = app_cl.update_user(body[:username], app_cl.adjust_body(username: invalid_username))
-            expect(response.status).to eq(400)
+            expect(response.status).to eq(500)
         end
 
         it 'verifies user can not update username with specials symbols' do
             invalid_username = '@#-/'
             response = app_cl.update_user(body[:username], app_cl.adjust_body(username: invalid_username))
-            expect(response.status).to eq(400)
+            expect(response.status).to eq(500)
         end
 
         it 'verifies user can not update username with mixed values' do
             invalid_username = '@#-/1Dark'
             #invalid_username = SecureRandom.base64(10)
             response = app_cl.update_user(body[:username], app_cl.adjust_body(username: invalid_username))
-            expect(response.status).to eq(400)
+            expect(response.status).to eq(500)
         end
 
-        it 'verifies user can not update username with length 50 symbols' do
-            invalid_username = 'K' * 50
+        it 'verifies user can not update username with length 51 symbols' do
+            invalid_username = 'K' * 51
             response = app_cl.update_user(body[:username], app_cl.adjust_body(username: invalid_username))
-            expect(response.status).to eq(400)
+            expect(response.status).to eq(500)
         end
     end
 
@@ -83,7 +83,7 @@ RSpec.describe 'Create -> Login -> Get' do
         "1 symbol": 'F',
         "empty field": " ",
         "specials symbols": "@/#$)",
-        "50 letters": 'k' * 50,
+        "51 letters": 'k' * 51,
         "numerical values": 123456,
         "mixed values": '@#-/1Dark'
     }
@@ -128,7 +128,7 @@ RSpec.describe 'Create -> Login -> Get' do
         "1 symbol": 'F',
         "empty field": " ",
         "specials symbols": "@/#$)",
-        "50 letters": 'k' * 50,
+        "51 letters": 'k' * 51,
         "mixed values": '@#-/1Dark'
     }
 
@@ -160,7 +160,7 @@ RSpec.describe 'Create -> Login -> Get' do
         "negative values": -5,
         "empty field": " ",
         "specials symbols": "@/#$)",
-        "length 51 symbols": "k" * 51,
+        "length 51 letters": "k" * 51,
         "text": "Fly",
         "mixed values": "@#-5/Dark"
     }
