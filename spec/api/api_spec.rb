@@ -143,5 +143,34 @@ RSpec.describe 'Create -> Login -> Get' do
 
   end
 
-  
+  context 'Symbol in each field' do
+    it "verifies user can registered with 'q1' sequence in each' field " do
+      body = app_cl.adjust_body(username: "&")
+      body = app_cl.adjust_body(firstName: "*")
+      body = app_cl.adjust_body(lastName: "%")
+      body = app_cl.adjust_body(email: "#")
+      body = app_cl.adjust_body(password: "?")
+      body = app_cl.adjust_body(phone: "!")
+      response = app_cl.create_user(body)
+      expect(response.status).to eq(200)  
+    end
+
+    it 'verifies user can login' do
+      response = app_cl.user_login(body[:username], body[:password])
+      expect(response.status).to eq(200)
+    end
+
+    it 'verifies user can get info' do
+      response = app_cl.get_user(body[:username])
+      expect(response.status).to eq(200)
+    end
+
+    it 'verifies user can logout' do
+      response = app_cl.user_logout
+      expect(response.status).to eq(200)
+    end
+
+  end
+end 
+
 
