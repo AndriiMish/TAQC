@@ -2,14 +2,11 @@ require_relative '../spec_helper'
 require_relative 'api_client.rb'
 require 'securerandom'
 
+body = api_cl.generate_random_body
+
 RSpec.describe 'PUT method checking to the any data in the body' do
 	api_cl = ApiClient.new
-	body = api_cl.generate_random_body
-	
-	
 	api_cl.create_user(body)
-
-
 
 
 	# Positive Functional Testing
@@ -28,7 +25,7 @@ RSpec.describe 'PUT method checking to the any data in the body' do
 					
 					api_cl.user_login(body[:username], body[:password])
 					response = api_cl.get_user(body[:username])
-					expect(response.status).to eq(200)
+					expect(response.status).to eq(200) and expect(valid_body).to eq(body)
 					api_cl.user_logout()
 					api_cl.delete_user(body[:username])	
 				end
