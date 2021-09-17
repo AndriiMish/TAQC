@@ -2,10 +2,10 @@ require_relative '../spec_helper'
 require_relative 'api_client.rb'
 require 'securerandom'
 
+api_cl = ApiClient.new
 body = api_cl.generate_random_body
 
 RSpec.describe 'PUT method checking to the any data in the body' do
-	api_cl = ApiClient.new
 	api_cl.create_user(body)
 
 
