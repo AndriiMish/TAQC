@@ -8,7 +8,6 @@ body = api_cl.generate_random_body
 RSpec.describe 'PUT method checking to the any data in the body' do
 	api_cl.create_user(body)
 
-
 	# Positive Functional Testing
 		context 'PUT method checking' do
 				it 'verifies that user can be edited by using valid data' do
